@@ -29,7 +29,12 @@ spring:
 
   jpa:
       show-sql: true
+      database: mysql
+      database-platform: org.hibernate.dialect.MySQL5Dialect
+      hibernate:
+        ddl-auto: update
       properties:
-        hibernate:
-          hbm2ddl:
-            auto: update
+            hibernate:
+              current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
+
+
